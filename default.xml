@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="gitee"
+           fetch="git@gitee.com:huangzhenming2008"
+           autodotgit="true" /> <!--fetch=".." 代表使用 repo init -u 指定的相对路径 也可用完整路径，example:https://gitee.com/MarineJ/manifest_example/blob/master/default.xml-->
+  <default revision="master"
+           remote="gitee" /><!--revision 为默认的拉取分支，后续提 pr 也以 revision 为默认目标分支-->
+
+  <project path="." name="test_root_project" />  <!--git@gitee.com:{namespace}/{name}.git name 与 clone 的 url 相关-->
+  <project path="sub_project_1" name="test_sub_projct_1" />  <!--git@gitee.com:{namespace}/{name}.git name 与 clone 的 url 相关-->
+  <project path="sub_project_2" name="test_sub_project_2" />
+</manifest>
