@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="gitee"
-           fetch="git@gitee.com:huangzhenming2008"
-           autodotgit="true" /> <!--fetch=".." 代表使用 repo init -u 指定的相对路径 也可用完整路径，example:https://gitee.com/MarineJ/manifest_example/blob/master/default.xml-->
+  <remote  name="origin"
+       fetch=".."
+       revision="master"
+       review="https://codeup.aliyun.com" />
   <remote  name="github"
-           fetch="git@github.com:huangzhenming"
-           autodotgit="true" /> <!--fetch=".." 代表使用 repo init -u 指定的相对路径 也可用完整路径，example:https://gitee.com/MarineJ/manifest_example/blob/master/default.xml-->
-  <default revision="main"
-           remote="github" /><!--revision 为默认的拉取分支，后续提 pr 也以 revision 为默认目标分支-->
+       fetch="https://github.com"
+       revision="main"
+       review="" />
+  <default remote="github"
+           revision="main"
+       sync-j="4" />
 
-  <project path="." name="test_root_project" />  <!--git@gitee.com:{namespace}/{name}.git name 与 clone 的 url 相关-->
-  <project path="sub_project_1" name="test_sub_project_1" />  <!--git@gitee.com:{namespace}/{name}.git name 与 clone 的 url 相关-->
-  <project path="sub_project_2" name="test_sub_project_2" />
+  <project path="." name="huangzhenming/test_root_project" groups="app"/>  <!--git@gitee.com:{namespace}/{name}.git name 与 clone 的 url 相关-->
+  <project path="sub_project_1" name="huangzhenming/test_sub_project_1" groups="app"/>  <!--git@gitee.com:{namespace}/{name}.git name 与 clone 的 url 相关-->
+  <project path="sub_project_2" name="huangzhenming/test_sub_project_2" groups="app"/>
 </manifest>
